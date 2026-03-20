@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legends 4 Legends 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    /* Entrance animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+        filter: blur(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    .animate {
+      opacity: 0;
+      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.5s; }
+    .delay-3 { animation-delay: 0.8s; }
+
+    /* Countdown number flip */
+    @keyframes numFlip {
+      0%   { opacity: 0; transform: translateY(-8px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .num-change {
+      animation: numFlip 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Background video */
+    #bg-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    /* Dark overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 1;
+    }
+
+    /* Main layout */
+    .container {
+      position: relative;
+      z-index: 2;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 56px;
+      padding: 24px;
+    }
+
+    /* Logo */
+    .logo-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo img {
+      width: min(60vw, 380px);
+      height: auto;
+      display: block;
+    }
+
+    /* Registration form */
+    .register-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .event-date {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      text-align: center;
+    }
+
+    .event-subtitle {
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+    }
+
+    .input-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .input-row input[type="email"] {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      outline: none;
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: 300;
+      color: #fff;
+      font-family: inherit;
+      letter-spacing: 0.08em;
+      text-align: center;
+      transition: border-color 0.4s ease;
+    }
+
+    .input-row input[type="email"]:focus {
+      border-bottom-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .input-row input[type="email"]::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+      letter-spacing: 0.08em;
+    }
+
+    .input-row button {
+      background: #fff;
+      border: none;
+      color: #000;
+      width: 100%;
+      padding: 13px 40px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-family: inherit;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .input-row button:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .input-row button:active {
+      transform: translateY(0);
+    }
+
+    /* Countdown */
+    .countdown {
+      display: flex;
+      gap: 32px;
+      text-align: center;
+    }
+
+    .countdown-unit {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .countdown-unit span:first-child {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1;
+      min-width: 2ch;
+    }
+
+    .countdown-unit span:last-child {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Success state */
+    .success-msg {
+      display: none;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background video — replace src with your video file -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="bg.mp4" type="video/mp4" />
+  </video>
+
+  <div class="overlay"></div>
+
+  <main class="container">
+
+    <div class="logo-group animate delay-1">
+      <div class="logo">
+        <img src="logo.svg" alt="Legends 4 Legends 2026" />
+      </div>
+      <p class="event-subtitle">1 October 2026, Amsterdam</p>
+    </div>
+
+    <div class="countdown animate delay-2" id="countdown">
+      <div class="countdown-unit"><span id="cd-days">--</span><span>Days</span></div>
+      <div class="countdown-unit"><span id="cd-hours">--</span><span>Hours</span></div>
+      <div class="countdown-unit"><span id="cd-mins">--</span><span>Minutes</span></div>
+      <div class="countdown-unit"><span id="cd-secs">--</span><span>Seconds</span></div>
+    </div>
+
+    <form class="register-form animate delay-3" id="form">
+      <div class="input-row">
+        <input type="email" id="email" placeholder="your@email.com" required autocomplete="email" />
+        <button type="submit">Notify me</button>
+      </div>
+      <span class="success-msg" id="success">You're on the list. Stay tuned.</span>
+    </form>
+
+  </main>
+
+  <script>
+    // Countdown to 1 October 2026
+    const target = new Date('2026-10-01T00:00:00').getTime();
+
+    function setNum(el, val) {
+      if (el.textContent !== val) {
+        el.textContent = val;
+        el.classList.remove('num-change');
+        void el.offsetWidth; // reflow to restart animation
+        el.classList.add('num-change');
+      }
+    }
+
+    function tick() {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+      setNum(document.getElementById('cd-days'),  String(Math.floor(diff / 86400000)));
+      setNum(document.getElementById('cd-hours'), String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0'));
+      setNum(document.getElementById('cd-mins'),  String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0'));
+      setNum(document.getElementById('cd-secs'),  String(Math.floor((diff % 60000) / 1000)).padStart(2, '0'));
+    }
+    tick();
+    setInterval(tick, 1000);
+
+    const form = document.getElementById('form');
+    const emailInput = document.getElementById('email');
+    const successMsg = document.getElementById('success');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      if (!email) return;
+
+      try {
+        const res = await fetch('/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+
+        if (res.ok) {
+          form.querySelector('.input-row').style.display = 'none';
+          form.querySelectorAll('p').forEach(el => el.style.display = 'none');
+          successMsg.style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      } catch {
+        alert('Could not connect. Please try again.');
+      }
+    });
+  </script>
+
+</body>
+</html>
