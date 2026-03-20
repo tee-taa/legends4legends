@@ -29,7 +29,7 @@ export default async function handler(req, res) {
     },
     body: JSON.stringify({
       from: 'Legends 4 Legends <onboarding@resend.dev>',
-      to: NOTIFY_EMAIL,
+      to: ['marcom@thetacapital.com', 'whitlock@thetacapital.com'],
       subject: `New registration: ${email}`,
       text: `Someone just signed up to be notified about Legends 4 Legends 2026.\n\nEmail: ${email}\nTime: ${new Date().toUTCString()}`,
     }),
