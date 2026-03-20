@@ -220,11 +220,31 @@
     /* Success state */
     .success-msg {
       display: none;
-      font-size: 13px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.7);
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
       text-align: center;
+      animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .success-msg p {
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.6;
+    }
+
+    .success-msg a {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(255, 255, 255, 0.4);
+      transition: text-decoration-color 0.2s;
+    }
+
+    .success-msg a:hover {
+      text-decoration-color: rgba(255, 255, 255, 0.9);
     }
   </style>
 </head>
@@ -258,7 +278,10 @@
         <input type="email" id="email" placeholder="your@email.com" required autocomplete="email" />
         <button type="submit">Notify me</button>
       </div>
-      <span class="success-msg" id="success">You're on the list. Stay tuned.</span>
+      <div class="success-msg" id="success">
+        <p>You're on the list. We'll notify you when announcements drop.</p>
+        <p>In the meantime, follow our thinking — <a href="https://thetacapital.com/insights/newsletter/" target="_blank" rel="noopener">read the weekly newsletter</a>.</p>
+      </div>
     </form>
 
   </main>
@@ -306,7 +329,7 @@
         if (res.ok) {
           form.querySelector('.input-row').style.display = 'none';
           form.querySelectorAll('p').forEach(el => el.style.display = 'none');
-          successMsg.style.display = 'block';
+          successMsg.style.display = 'flex';
         } else {
           alert('Something went wrong. Please try again.');
         }
