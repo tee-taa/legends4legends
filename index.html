@@ -217,6 +217,23 @@
       color: rgba(255, 255, 255, 0.35);
     }
 
+    /* Form label */
+    .form-label {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      text-align: center;
+    }
+
+    /* Loading state */
+    .input-row button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
     /* Success state */
     .success-msg {
       display: none;
@@ -224,6 +241,10 @@
       align-items: center;
       gap: 10px;
       text-align: center;
+    }
+
+    .success-msg.visible {
+      display: flex;
       animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
@@ -274,9 +295,10 @@
     </div>
 
     <form class="register-form animate delay-3" id="form">
+      <p class="form-label">Register to stay informed</p>
       <div class="input-row">
         <input type="email" id="email" placeholder="your@email.com" required autocomplete="email" />
-        <button type="submit">Notify me</button>
+        <button type="submit" id="submit-btn">Notify me</button>
       </div>
       <div class="success-msg" id="success">
         <p>You're on the list. We'll notify you when announcements drop.</p>
@@ -312,12 +334,16 @@
 
     const form = document.getElementById('form');
     const emailInput = document.getElementById('email');
+    const submitBtn = document.getElementById('submit-btn');
     const successMsg = document.getElementById('success');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = emailInput.value.trim();
       if (!email) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = '—';
 
       try {
         const res = await fetch('/api/register', {
@@ -328,12 +354,16 @@
 
         if (res.ok) {
           form.querySelector('.input-row').style.display = 'none';
-          form.querySelectorAll('p').forEach(el => el.style.display = 'none');
-          successMsg.style.display = 'flex';
+          form.querySelector('.form-label').style.display = 'none';
+          successMsg.classList.add('visible');
         } else {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Notify me';
           alert('Something went wrong. Please try again.');
         }
       } catch {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Notify me';
         alert('Could not connect. Please try again.');
       }
     });
