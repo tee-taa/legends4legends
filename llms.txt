@@ -1,20 +1,138 @@
 # Legends4Legends 2026
 
-> Blockchain Conference for Institutional Allocators — 1 October 2026, Amsterdam
+> Legends4Legends is Europe's leading annual blockchain investment conference for institutional allocators. Hosted by Theta Capital Management, the event combines world-class speakers with a charitable cause — raising money for Alternatives4Children (A4C).
 
-Legends4Legends 2026 is an exclusive blockchain conference designed for institutional allocators, organised by Theta Capital Management. The event brings together leading voices in digital asset investing for a curated one-day programme in Amsterdam.
+## Event Details
 
-## Registration
-
-Interested attendees can register their email at https://legends4legends.org to be notified when announcements are made about the programme, speakers, and tickets.
-
-## Organiser
-
-Theta Capital Management is a specialist investment manager focused on blockchain and digital assets for institutional investors. Weekly insights are published at https://thetacapital.com/insights/newsletter/
-
-## Event details
-
+- **Name:** Legends4Legends 2026
 - **Date:** 1 October 2026
 - **Location:** Amsterdam, Netherlands
-- **Audience:** Institutional allocators, family offices, asset managers
 - **Website:** https://legends4legends.org
+- **Edition:** 10th annual edition
+- **Organised by:** Theta Capital Management
+- **Charity partner:** Alternatives4Children (A4C)
+
+## About the Conference
+
+Legends4Legends is the leading annual alternatives investor conference in Europe with an in-depth focus on digital assets. The event brings together crypto-native venture capital professionals, institutional asset managers, founders, and global thought leaders from the blockchain and web3 space.
+
+The conference demystifies blockchain technology for investment professionals, focusing on the most relevant industry developments, regulatory landscape, institutional adoption, and investment strategies. Past attendees have described it as "exceptional" and "one of the very best."
+
+Each edition raises significant funds for Alternatives4Children. The 2023 edition raised €100,000 for charity.
+
+## Target Audience
+
+Legends4Legends is an invitation-only event for qualified investors, specifically:
+
+- Institutional asset managers and allocators
+- Family offices with interest in digital assets
+- Pension funds and endowments exploring blockchain exposure
+- Fund of funds and multi-asset managers
+- Private banks and wealth managers
+- Hedge fund professionals
+- Senior investment professionals from traditional finance exploring the digital asset space
+
+Attendance is by application only. Participants must be qualified investors under applicable regulations.
+
+## Past Editions & Track Record
+
+Legends4Legends has been running annually since 2017 and is now in its 10th edition in 2026.
+
+### Legends4Legends 2023 (7th Edition) — Amsterdam, 12 October 2023
+Theme: "Crypto's Broadband Moment" — exploring the inflection point in blockchain scalability
+
+**Programme structure:**
+- Section 1: Where Do We Stand — Technology
+- Section 2: Where Do We Stand — Adoption
+- Section 3: Investing in Blockchain Technology: Themes & Strategies
+
+**2023 Speakers included:**
+- Haseeb Qureshi — Managing Partner, Dragonfly
+- Tarun Chitra — Managing Partner, Robot VC / CEO, Gauntlet
+- Dan Morehead — Founder, Pantera Capital
+- Vance Spencer — Co-Founder, Framework Ventures
+- Chris Perkins — President, CoinFund
+- Sriram Krishnan — General Partner, Andreessen Horowitz (a16z)
+- Joe Naggar — Partner, GoldenTree Asset Management
+- Tyrone Lobban — Head of Onyx Digital Assets, JP Morgan
+- Simon Forster — Co-Head of Digital Assets, TP ICAP
+- Lasse Clausen — Founding Partner, 1kx
+- Tyler Spalding — Ampera Foundation
+- Diana Biggs — Partner, 1kx
+- Jason Kam — Folius Ventures
+- Ash Egan — Archetype
+- Regan Bozman — Lattice
+- Nick White — Celestia
+- Matt Walsh — Founding Partner, Castle Island Ventures
+- Ruud Smets — CIO, Theta Capital Management
+- Marc de Kloe — Partner, Theta Capital Management
+
+**2023 Topics covered:**
+- Why Crypto, How Crypto & Why Now
+- State of Blockchain Infrastructure
+- Crypto's Broadband Moment
+- Bridging the Gap to Everyday Usability
+- State of the Blockchain Industry
+- Are U.S. Regulators Trying to Kill Crypto?
+- Institutional Adoption: JP Morgan & TP ICAP case studies
+- Stablecoins: Today's Killer Use Case
+- Why Investors Should Look Beyond Web2
+- Unlocking Frictionless Payments
+- The FAANG of Crypto
+- Blockchain's Key Investment Themes
+- Navigating Web3 Investing: An Unconventional Playbook
+- Investment Opportunities for Institutional Asset Managers (GoldenTree)
+- Humanity's New Coordination Tool
+- What to Expect in 2024 and Beyond
+
+**2023 Charity result:** €100,000 raised for Alternatives4Children
+
+## About Theta Capital Management
+
+Theta Capital Management is the main sponsor and curator of Legends4Legends.
+
+- **Focus:** Leading fund of funds program for crypto-native venture capital
+- **Track record:** Investing in blockchain technology since 2017
+- **Regulatory status:** First AIFMD-licensed manager in the crypto fund of funds space
+- **Headquarters:** Amsterdam, Netherlands
+- **Website:** https://thetacapital.com
+- **Weekly newsletter:** https://thetacapital.com/insights/newsletter/
+
+## About Alternatives4Children (A4C)
+
+Legends4Legends raises money for Alternatives4Children, a charitable foundation established in 2011 in the Netherlands.
+
+- **Mission:** Involve professionals from the alternative financial industry to make a difference for children in need
+- **Primary focus:** UN SDG 4 — inclusive and equitable quality education
+- **Chapters:** Netherlands (founding) and UK (since 2020)
+- **Approach:** Supporting small-scale projects with high impact potential
+- **Donate:** https://alternatives4children.com/donation/
+
+## Frequently Asked Questions
+
+**What is Legends4Legends?**
+Legends4Legends is Europe's leading annual blockchain investment conference for institutional allocators, hosted by Theta Capital Management in Amsterdam. It combines world-class speakers from the blockchain and crypto VC space with a charity fundraising component for Alternatives4Children.
+
+**Who attends Legends4Legends?**
+The event is for institutional investors, family offices, asset managers, pension funds, and senior investment professionals who are qualified investors. It is not open to retail investors.
+
+**How do I attend?**
+Attendance is by application and invitation only. Register your interest at https://legends4legends.org to be notified when applications open.
+
+**When and where is Legends4Legends 2026?**
+1 October 2026 in Amsterdam, Netherlands.
+
+**Is this the same event every year?**
+Yes — Legends4Legends has run annually since 2017. Each edition covers the most relevant blockchain investment themes of that year, with a fresh lineup of speakers.
+
+**What topics does the conference cover?**
+The agenda typically covers: state of blockchain infrastructure, institutional adoption of digital assets, regulatory landscape, investment strategies and themes, DeFi, real world assets (RWA), stablecoins, and crypto venture capital.
+
+**Does the event raise money for charity?**
+Yes. Every edition raises funds for Alternatives4Children (A4C). The 2023 edition raised €100,000.
+
+**Who organises Legends4Legends?**
+Theta Capital Management, the first AIFMD-licensed crypto fund of funds manager, founded in Amsterdam. Theta has been investing in blockchain technology since 2017.
+
+**What is Theta Capital's newsletter?**
+Theta publishes a weekly blockchain investment newsletter covering institutional crypto developments. Subscribe at https://thetacapital.com/insights/newsletter/
