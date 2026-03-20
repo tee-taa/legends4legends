@@ -217,6 +217,17 @@
       color: rgba(255, 255, 255, 0.35);
     }
 
+    /* Disclaimer */
+    .disclaimer {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.25);
+      text-align: center;
+      line-height: 1.7;
+      max-width: 380px;
+    }
+
     /* Form label */
     .form-label {
       font-size: 11px;
@@ -300,6 +311,7 @@
         <input type="email" id="email" placeholder="your@email.com" required autocomplete="email" />
         <button type="submit" id="submit-btn">Notify me</button>
       </div>
+      <p class="disclaimer">By submitting I confirm that I am a qualified investor and agree that my personal data will be collected, processed and only be used by Theta Capital Management to keep me informed about this and future events, products and services.</p>
       <div class="success-msg" id="success">
         <p>You're on the list. We'll notify you when announcements drop.</p>
         <p>In the meantime, follow our thinking — <a href="https://thetacapital.com/insights/newsletter/" target="_blank" rel="noopener">read the weekly newsletter</a>.</p>
@@ -355,6 +367,7 @@
         if (res.ok) {
           form.querySelector('.input-row').style.display = 'none';
           form.querySelector('.form-label').style.display = 'none';
+          form.querySelector('.disclaimer').style.display = 'none';
           successMsg.classList.add('visible');
         } else {
           submitBtn.disabled = false;
