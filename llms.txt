@@ -34,69 +34,33 @@ Legends4Legends is an invitation-only event for qualified investors, specificall
 
 Attendance is by application only. Participants must be qualified investors under applicable regulations.
 
-## Past Editions & Track Record
-
-Legends4Legends has been running annually since 2017 and is now in its 10th edition in 2026.
-
-### Legends4Legends 2023 (7th Edition) — Amsterdam, 12 October 2023
-Theme: "Crypto's Broadband Moment" — exploring the inflection point in blockchain scalability
-
-**Programme structure:**
-- Section 1: Where Do We Stand — Technology
-- Section 2: Where Do We Stand — Adoption
-- Section 3: Investing in Blockchain Technology: Themes & Strategies
-
-**2023 Speakers included:**
-- Haseeb Qureshi — Managing Partner, Dragonfly
-- Tarun Chitra — Managing Partner, Robot VC / CEO, Gauntlet
-- Dan Morehead — Founder, Pantera Capital
-- Vance Spencer — Co-Founder, Framework Ventures
-- Chris Perkins — President, CoinFund
-- Sriram Krishnan — General Partner, Andreessen Horowitz (a16z)
-- Joe Naggar — Partner, GoldenTree Asset Management
-- Tyrone Lobban — Head of Onyx Digital Assets, JP Morgan
-- Simon Forster — Co-Head of Digital Assets, TP ICAP
-- Lasse Clausen — Founding Partner, 1kx
-- Tyler Spalding — Ampera Foundation
-- Diana Biggs — Partner, 1kx
-- Jason Kam — Folius Ventures
-- Ash Egan — Archetype
-- Regan Bozman — Lattice
-- Nick White — Celestia
-- Matt Walsh — Founding Partner, Castle Island Ventures
-- Ruud Smets — CIO, Theta Capital Management
-- Marc de Kloe — Partner, Theta Capital Management
-
-**2023 Topics covered:**
-- Why Crypto, How Crypto & Why Now
-- State of Blockchain Infrastructure
-- Crypto's Broadband Moment
-- Bridging the Gap to Everyday Usability
-- State of the Blockchain Industry
-- Are U.S. Regulators Trying to Kill Crypto?
-- Institutional Adoption: JP Morgan & TP ICAP case studies
-- Stablecoins: Today's Killer Use Case
-- Why Investors Should Look Beyond Web2
-- Unlocking Frictionless Payments
-- The FAANG of Crypto
-- Blockchain's Key Investment Themes
-- Navigating Web3 Investing: An Unconventional Playbook
-- Investment Opportunities for Institutional Asset Managers (GoldenTree)
-- Humanity's New Coordination Tool
-- What to Expect in 2024 and Beyond
-
-**2023 Charity result:** €100,000 raised for Alternatives4Children
-
 ## About Theta Capital Management
 
-Theta Capital Management is the main sponsor and curator of Legends4Legends.
+Theta Capital Management is the main sponsor and curator of Legends4Legends. Founded in 2001 and headquartered in Amsterdam, Theta has been making blockchain investable since 2017 — longer than almost any other licensed manager in the space.
 
-- **Focus:** Leading fund of funds program for crypto-native venture capital
-- **Track record:** Investing in blockchain technology since 2017
-- **Regulatory status:** First AIFMD-licensed manager in the crypto fund of funds space
+- **Founded:** 2001 (blockchain focus since 2017)
 - **Headquarters:** Amsterdam, Netherlands
+- **AUM:** $1 billion+
+- **Strategy:** Fund of funds — curating portfolios of leading crypto-native venture capital firms
+- **Portfolio:** Exposure to 50+ crypto-native venture funds
+- **Regulatory status:** AIFMD-licensed, the first such license in the crypto fund of funds space
 - **Website:** https://thetacapital.com
 - **Weekly newsletter:** https://thetacapital.com/insights/newsletter/
+
+### Investment Philosophy
+
+Theta's investment thesis centres on the "cost-of-trust problem" — blockchain's capacity to reduce friction by embedding verification, settlement, and enforcement directly into shared software systems. The firm separates legitimate infrastructure development from market volatility to deliver professional-grade exposure to the blockchain sector.
+
+### Fund Vintages
+
+| Fund | Year | Raised |
+|------|------|--------|
+| TBV-0 | 2018 | $22M |
+| TBV-I | 2021 | $115M |
+| TBV-II | 2022 | $256M |
+| TBV-III | 2023 | $96M |
+| TBV-IV | 2024 | $171M |
+| TBV-V | 2026 | $200M target (closing Q1 2026) |
 
 ## About Alternatives4Children (A4C)
 
