@@ -3,21 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-visual" />
-  <title>Early Access – Legends4Legends 2026</title>
-  <meta name="description" content="Request early access to Legends4Legends 2026 — the exclusive blockchain conference for institutional allocators. 1 October 2026, Amsterdam." />
-  <meta name="robots" content="index, follow" />
+  <title>Legends4Legends 2026</title>
+  <meta name="description" content="Legends4Legends 2026 — 1 October, Eye Filmmuseum, Amsterdam." />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href="https://legends4legends.org/apply" />
-  <meta property="og:title" content="Early Access – Legends4Legends 2026" />
-  <meta property="og:description" content="Request early access to Legends4Legends 2026. 1 October 2026, Eye Filmmuseum, Amsterdam." />
-  <meta property="og:url" content="https://legends4legends.org/apply" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://legends4legends.org/legends4legends-2026.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="628" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://legends4legends.org/legends4legends-2026.jpg" />
-  <meta name="twitter:title" content="Early Access – Legends4Legends 2026" />
-  <meta name="twitter:description" content="Request early access to Legends4Legends 2026. 1 October 2026, Amsterdam." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet" />
@@ -60,32 +49,9 @@
     .delay-3 { animation-delay: 0.8s; }
     .delay-4 { animation-delay: 1.1s; }
 
-    /* Background video */
-    #bg-video {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    /* Dark overlay */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65);
-      z-index: 1;
-    }
-
     /* Main layout */
     .container {
       position: relative;
-      z-index: 2;
       min-height: 100dvh;
       display: flex;
       flex-direction: column;
@@ -108,18 +74,6 @@
       width: min(55vw, 320px);
       height: auto;
       display: block;
-    }
-
-    /* Early access badge */
-    .badge {
-      font-size: 9px;
-      font-weight: 400;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 6px 16px;
-      display: inline-block;
     }
 
     /* Form section */
@@ -151,6 +105,16 @@
       letter-spacing: 0.04em;
       color: rgba(255, 255, 255, 0.45);
       line-height: 1.6;
+    }
+
+    .form-instruction {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.3);
+      text-align: center;
+      line-height: 1.6;
+      margin-top: -8px;
     }
 
     /* Form fields */
@@ -343,26 +307,20 @@
 </head>
 <body>
 
-  <video id="bg-video" autoplay muted loop playsinline preload="auto">
-    <source src="bg.mp4" type="video/mp4" />
-  </video>
-
-  <div class="overlay"></div>
-
   <main class="container">
 
-    <div class="animate delay-1" style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+    <div class="animate delay-1">
       <a href="/" class="logo">
         <img src="logo.svg" alt="Legends 4 Legends 2026" />
       </a>
-      <span class="badge">Early Access</span>
     </div>
 
     <div class="form-section animate delay-2">
       <div class="form-heading">
-        <h1>Request Access</h1>
-        <p>Attendance is by invitation only. Submit your details<br>and we'll be in touch if there's a fit.</p>
+        <h1>You were invited.</h1>
+        <p>Legends4Legends 2026 &mdash; October 1, Eye Filmmuseum, Amsterdam</p>
       </div>
+      <p class="form-instruction">Submit your details below. We'll confirm your place personally.</p>
 
       <form id="apply-form" style="width:100%">
         <div class="field-grid">
@@ -403,7 +361,7 @@
       <div class="event-about">
         <p>An exclusive and highly curated charity conference on digital assets and blockchain, for professional investors and decision-makers.</p>
         <p>Legends4Legends celebrates its 10th anniversary in 2026 with a gathering of the leading opinion leaders in the blockchain world and allocators in a truly private and distinctive setting. The conference fosters genuine connection and intentionally limits attendance to a maximum of 350 international UHNWIs, Family Offices, and Institutional Investors. It brings together traditional allocators and the crypto VC industry in the heart of Amsterdam, enabling focused dialogue and meaningful exchange on blockchain and its investment prospects.</p>
-        <p>The 2025 event was a huge success. Spaces are limited, so early registration is encouraged.</p>
+        <p>The 2025 event was a huge success.</p>
         <p>Legends4Legends is organised by <a href="https://thetacapital.com" target="_blank" rel="noopener">Theta Capital</a> supporting Alternatives4Children to raise money for children's education.</p>
       </div>
     </div>
@@ -411,12 +369,6 @@
   </main>
 
   <script>
-    // iOS video autoplay nudge
-    const vid = document.getElementById('bg-video');
-    vid.play().catch(() => {
-      document.addEventListener('touchstart', () => vid.play(), { once: true });
-    });
-
     const form = document.getElementById('apply-form');
     const submitBtn = document.getElementById('submit-btn');
     const successMsg = document.getElementById('success');
