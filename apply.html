@@ -331,7 +331,7 @@
             <input type="email" id="email" placeholder="Email address" required autocomplete="email" />
           </div>
         </div>
-        <button type="submit" class="submit-btn" id="submit-btn">Request Access</button>
+        <button type="submit" class="submit-btn" id="submit-btn">Confirm attendance</button>
         <div class="success-msg" id="success">
           <p class="success-title">Thank you.</p>
           <p class="success-sub">We'll be in touch shortly to confirm your place.</p>
@@ -386,12 +386,12 @@
           successMsg.classList.add('visible');
         } else {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Request Access';
+          submitBtn.textContent = 'Confirm attendance';
           alert('Something went wrong. Please try again.');
         }
       } catch {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Request Access';
+        submitBtn.textContent = 'Confirm attendance';
         alert('Could not connect. Please try again.');
       }
     });
