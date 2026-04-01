@@ -53,5 +53,21 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Failed to send notification' });
   }
 
+  // Save to Supabase
+  const { SUPABASE_URL, SUPABASE_SERVICE_KEY } = process.env;
+
+  if (SUPABASE_URL && SUPABASE_SERVICE_KEY) {
+    await fetch(`${SUPABASE_URL}/rest/v1/dinner_rsvps`, {
+      method: 'POST',
+      headers: {
+        apikey: SUPABASE_SERVICE_KEY,
+        Authorization: `Bearer ${SUPABASE_SERVICE_KEY}`,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify({ name, email, next_day: nextDay }),
+    });
+  }
+
   return res.status(200).json({ ok: true });
 }
