@@ -364,8 +364,8 @@
         </label>
         <button type="submit" class="submit-btn" id="submit-btn">Accept invitation</button>
         <div class="success-msg" id="success">
-          <p class="success-title">Thank you.</p>
-          <p class="success-sub">We look forward to seeing you.</p>
+          <p class="success-title">You confirmed your participation in the dinner.</p>
+          <p class="success-sub">We look forward to seeing you, <span id="success-name"></span>.</p>
         </div>
       </form>
 
@@ -405,7 +405,9 @@
 
         if (res.ok) {
           form.querySelector('.field-grid').style.display = 'none';
+          form.querySelector('.checkbox-field').style.display = 'none';
           submitBtn.style.display = 'none';
+          document.getElementById('success-name').textContent = name;
           successMsg.classList.add('visible');
         } else {
           submitBtn.disabled = false;
