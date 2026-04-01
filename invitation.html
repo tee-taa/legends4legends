@@ -326,7 +326,7 @@
 </head>
 <body>
 
-  <video class="bg-video" autoplay muted loop playsinline>
+  <video class="bg-video" id="bg-video" autoplay muted loop playsinline preload="auto">
     <source src="bg-wih.mp4" type="video/mp4" />
   </video>
 
@@ -352,7 +352,7 @@
         </div>
         <label class="checkbox-field">
           <input type="checkbox" id="nextDay" checked />
-          <span>Sign me up for the conference the next day</span>
+          <span>I would also like to attend the Legends4Legends conference on October 1</span>
         </label>
         <button type="submit" class="submit-btn" id="submit-btn">Accept invitation</button>
         <div class="success-msg" id="success">
@@ -367,6 +367,11 @@
   </main>
 
   <script>
+    const vid = document.getElementById('bg-video');
+    vid.play().catch(() => {
+      document.addEventListener('touchstart', () => vid.play(), { once: true });
+    });
+
     const form = document.getElementById('invitation-form');
     const submitBtn = document.getElementById('submit-btn');
     const successMsg = document.getElementById('success');
