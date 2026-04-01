@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email } = req.body ?? {};
+  const { name, email, nextDay } = req.body ?? {};
 
   if (!name) {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -38,8 +38,9 @@ export default async function handler(req, res) {
       text: [
         `New invitation acceptance for Legends4Legends 2026.`,
         ``,
-        `Name:  ${name}`,
-        `Email: ${email}`,
+        `Name:      ${name}`,
+        `Email:     ${email}`,
+        `Next day:  ${nextDay ? 'Yes' : 'No'}`,
         ``,
         `Time: ${new Date().toUTCString()}`,
       ].join('\n'),

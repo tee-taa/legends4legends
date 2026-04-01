@@ -241,6 +241,56 @@
       line-height: 1.7;
     }
 
+    /* Checkbox field */
+    .checkbox-field {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      margin-bottom: 24px;
+      cursor: pointer;
+    }
+
+    .checkbox-field input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      position: relative;
+    }
+
+    .checkbox-field input[type="checkbox"]:checked {
+      background: #fff;
+      border-color: #fff;
+    }
+
+    .checkbox-field input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 1px;
+      width: 5px;
+      height: 9px;
+      border: 2px solid #090028;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+
+    .checkbox-field label {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: rgba(255, 255, 255, 0.55);
+      cursor: pointer;
+      line-height: 1.5;
+    }
+
     @media (max-width: 480px) {
       .field-grid {
         grid-template-columns: 1fr;
@@ -272,6 +322,10 @@
             <input type="email" id="email" placeholder="Email address" required autocomplete="email" />
           </div>
         </div>
+        <label class="checkbox-field">
+          <input type="checkbox" id="nextDay" checked />
+          <span>Sign me up for the conference the next day</span>
+        </label>
         <button type="submit" class="submit-btn" id="submit-btn">Accept invitation</button>
         <div class="success-msg" id="success">
           <p class="success-title">Thank you.</p>
@@ -294,6 +348,7 @@
 
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
+      const nextDay = document.getElementById('nextDay').checked;
 
       if (!name || !email) return;
 
@@ -304,7 +359,7 @@
         const res = await fetch('/api/invitation', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email }),
+          body: JSON.stringify({ name, email, nextDay }),
         });
 
         if (res.ok) {
